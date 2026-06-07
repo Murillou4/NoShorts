@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Instale a extensão NoShorts em navegadores Chromium, Firefox e Safari para remover Shorts do YouTube.">
+    <title>NoShorts - Instalação manual</title>
+    <link rel="icon" href="icons/icon48.png">
+    <link rel="stylesheet" href="site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="NoShorts">
+        <img src="icons/icon48.png" alt="" width="32" height="32">
+        <span>NoShorts</span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a href="#instalar">Instalar</a>
+        <a href="#navegadores">Navegadores</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Extensão WebExtension</p>
+          <h1 id="hero-title">YouTube sem Shorts, em mais navegadores.</h1>
+          <p class="lead">
+            Baixe o NoShorts para Chrome, Edge, Brave, Opera, Vivaldi, Arc,
+            Chromium, Firefox e Safari no macOS.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="dist/NoShorts-1.0.0.zip" download>
+              Baixar para Chromium
+            </a>
+            <button class="button ghost" type="button" data-copy="auto">
+              Copiar caminho de instalação
+            </button>
+          </div>
+
+          <p class="hint" id="detectedBrowser">Detectando seu navegador...</p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <img class="hero-icon" src="icons/icon128.png" alt="">
+          <div class="mock-panel">
+            <div class="mock-top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="mock-row strong">
+              <span class="mock-dot"></span>
+              <span>Modo do desenvolvedor</span>
+              <span class="mock-toggle"></span>
+            </div>
+            <div class="mock-row">
+              <span class="mock-box"></span>
+              <span>Carregar sem compactação</span>
+            </div>
+            <div class="mock-row">
+              <span class="mock-box"></span>
+              <span>Selecionar pasta extraída</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="download-section" aria-labelledby="download-title">
+        <div class="section-label">
+          <p>Downloads</p>
+          <h2 id="download-title">Escolha o pacote certo</h2>
+        </div>
+
+        <div class="download-grid">
+          <article class="download-card">
+            <span>Mais simples</span>
+            <h3>Chromium</h3>
+            <p>Chrome, Edge, Brave, Opera, Vivaldi, Arc e Chromium.</p>
+            <a class="button primary" href="dist/NoShorts-1.0.0.zip" download>Baixar ZIP</a>
+          </article>
+          <article class="download-card">
+            <span>Firefox</span>
+            <h3>Firefox Desktop</h3>
+            <p>Pacote para teste temporário ou envio para assinatura no AMO.</p>
+            <a class="button primary" href="dist/NoShorts-1.0.0-firefox.zip" download>Baixar pacote Firefox</a>
+          </article>
+          <article class="download-card">
+            <span>macOS</span>
+            <h3>Safari</h3>
+            <p>Fonte para converter em Safari Web Extension usando Xcode no Mac.</p>
+            <a class="button primary" href="dist/NoShorts-1.0.0-safari-source.zip" download>Baixar fonte Safari</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="install-band" id="instalar" aria-labelledby="install-title">
+        <div class="section-label">
+          <p>Passo a passo</p>
+          <h2 id="install-title">Instalação manual em Chromium</h2>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <span>1</span>
+            <div>
+              <h3>Baixe o pacote Chromium</h3>
+              <p>Use o botão de download e salve o arquivo <code>NoShorts-1.0.0.zip</code>.</p>
+            </div>
+          </li>
+          <li>
+            <span>2</span>
+            <div>
+              <h3>Extraia para uma pasta fixa</h3>
+              <p>Exemplo: <code>C:\Extensoes\NoShorts</code>. Não apague essa pasta depois.</p>
+            </div>
+          </li>
+          <li>
+            <span>3</span>
+            <div>
+              <h3>Abra a página de extensões do seu navegador</h3>
+              <p>Copie a URL do seu navegador abaixo, cole na barra de endereço e pressione Enter.</p>
+            </div>
+          </li>
+          <li>
+            <span>4</span>
+            <div>
+              <h3>Ative o modo do desenvolvedor</h3>
+              <p>O botão normalmente fica no topo ou no canto da página de extensões.</p>
+            </div>
+          </li>
+          <li>
+            <span>5</span>
+            <div>
+              <h3>Carregue a pasta extraída</h3>
+              <p>Clique em <strong>Carregar sem compactação</strong> e selecione a pasta que contém o <code>manifest.json</code>.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="browser-section" id="navegadores" aria-labelledby="browser-title">
+        <div class="section-label">
+          <p>Compatibilidade</p>
+          <h2 id="browser-title">Escolha seu navegador</h2>
+        </div>
+
+        <div class="browser-grid" id="browserGrid">
+          <article class="browser-card" data-browser="chrome" data-url="chrome://extensions">
+            <h3>Google Chrome</h3>
+            <code>chrome://extensions</code>
+            <button type="button" data-copy-url="chrome://extensions">Copiar URL</button>
+          </article>
+          <article class="browser-card" data-browser="edge" data-url="edge://extensions">
+            <h3>Microsoft Edge</h3>
+            <code>edge://extensions</code>
+            <button type="button" data-copy-url="edge://extensions">Copiar URL</button>
+          </article>
+          <article class="browser-card" data-browser="brave" data-url="brave://extensions">
+            <h3>Brave</h3>
+            <code>brave://extensions</code>
+            <button type="button" data-copy-url="brave://extensions">Copiar URL</button>
+          </article>
+          <article class="browser-card" data-browser="opera" data-url="opera://extensions">
+            <h3>Opera</h3>
+            <code>opera://extensions</code>
+            <button type="button" data-copy-url="opera://extensions">Copiar URL</button>
+          </article>
+          <article class="browser-card" data-browser="vivaldi" data-url="vivaldi://extensions">
+            <h3>Vivaldi</h3>
+            <code>vivaldi://extensions</code>
+            <button type="button" data-copy-url="vivaldi://extensions">Copiar URL</button>
+          </article>
+          <article class="browser-card" data-browser="arc" data-url="chrome://extensions">
+            <h3>Arc</h3>
+            <code>chrome://extensions</code>
+            <button type="button" data-copy-url="chrome://extensions">Copiar URL</button>
+          </article>
+          <article class="browser-card" data-browser="chromium" data-url="chrome://extensions">
+            <h3>Chromium</h3>
+            <code>chrome://extensions</code>
+            <button type="button" data-copy-url="chrome://extensions">Copiar URL</button>
+          </article>
+          <article class="browser-card" data-browser="firefox" data-url="about:debugging#/runtime/this-firefox">
+            <h3>Firefox</h3>
+            <code>about:debugging#/runtime/this-firefox</code>
+            <button type="button" data-copy-url="about:debugging#/runtime/this-firefox">Copiar URL</button>
+          </article>
+          <article class="browser-card" data-browser="safari" data-url="xcrun safari-web-extension-packager">
+            <h3>Safari no Mac</h3>
+            <code>xcrun safari-web-extension-packager</code>
+            <button type="button" data-copy-url="xcrun safari-web-extension-packager">Copiar comando</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="platform-section" aria-labelledby="platform-title">
+        <div class="section-label">
+          <p>Firefox e Safari</p>
+          <h2 id="platform-title">O que muda fora do Chromium</h2>
+        </div>
+
+        <div class="platform-list">
+          <article>
+            <h3>Firefox</h3>
+            <p>
+              Para teste, abra <code>about:debugging#/runtime/this-firefox</code>,
+              clique em <strong>Load Temporary Add-on</strong> e selecione o pacote Firefox.
+              Para instalar de forma permanente no Firefox normal, o pacote precisa ser assinado pela Mozilla.
+            </p>
+          </article>
+          <article>
+            <h3>Safari no macOS</h3>
+            <p>
+              Safari não carrega ZIP de extensão direto. No Mac, baixe a fonte Safari,
+              rode o packager do Xcode e gere um app contendo a Safari Web Extension.
+              Para distribuir para outras pessoas, a Apple exige assinatura e distribuição via App Store
+              ou app assinado/notarizado.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="warning-section" aria-labelledby="warning-title">
+        <div>
+          <p class="eyebrow">Atenção</p>
+          <h2 id="warning-title">No Chromium, selecione a pasta, não o ZIP.</h2>
+        </div>
+        <p>
+          Chrome, Edge e navegadores Chromium não instalam esse ZIP direto pelo site.
+          Primeiro extraia o pacote, depois selecione a pasta extraída no botão
+          <strong>Carregar sem compactação</strong>.
+        </p>
+      </section>
+
+      <section class="faq" id="duvidas" aria-labelledby="faq-title">
+        <div class="section-label">
+          <p>Dúvidas rápidas</p>
+          <h2 id="faq-title">O que seus amigos vão perguntar</h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Preciso manter a pasta depois de instalar?</summary>
+            <p>Sim. O navegador lê a extensão dessa pasta. Se apagar ou mover, a extensão para de funcionar.</p>
+          </details>
+          <details>
+            <summary>Funciona no Firefox?</summary>
+            <p>Sim, existe um pacote Firefox. Para uso permanente no Firefox normal, ele precisa ser assinado pela Mozilla.</p>
+          </details>
+          <details>
+            <summary>Funciona no Safari do Mac?</summary>
+            <p>Sim como Safari Web Extension, mas precisa ser convertido e empacotado em um app no macOS com Xcode.</p>
+          </details>
+          <details>
+            <summary>Como atualizo depois?</summary>
+            <p>Substitua os arquivos da pasta extraída pela versão nova e clique em Recarregar na página de extensões.</p>
+          </details>
+          <details>
+            <summary>Ele coleta dados?</summary>
+            <p>Não. A extensão salva só preferências e contadores locais no navegador.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>NoShorts 1.0.0</span>
+      <a href="PRIVACY.md">Privacidade</a>
+      <a href="dist/NoShorts-1.0.0.zip" download>Download</a>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" hidden></div>
+    <script src="site.js"></script>
+  </body>
+</html>

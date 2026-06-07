@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NoShorts - Opções</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <div class="brand">
+          <img src="../icons/icon128.png" width="56" height="56" alt="">
+          <div>
+            <p>NoShorts</p>
+            <h1>Controle de Shorts para YouTube</h1>
+          </div>
+        </div>
+        <div class="status-line" id="statusText">Carregando</div>
+      </header>
+
+      <section class="settings-grid" aria-label="Configurações">
+        <div class="setting-block">
+          <h2>Proteção</h2>
+          <label class="setting-row">
+            <span>
+              <strong>Extensão ativa</strong>
+              <small>Controla todas as regras abaixo.</small>
+            </span>
+            <input id="enabled" type="checkbox">
+          </label>
+          <label class="setting-row">
+            <span>
+              <strong>Aviso curto</strong>
+              <small>Mostra confirmação ao bloquear um clique em Shorts.</small>
+            </span>
+            <input id="showBlockedNotice" type="checkbox">
+          </label>
+        </div>
+
+        <div class="setting-block">
+          <h2>YouTube</h2>
+          <label class="setting-row">
+            <span>
+              <strong>Bloquear páginas de Shorts</strong>
+              <small>Redireciona `/shorts`, abas de canal e hashtags de Shorts.</small>
+            </span>
+            <input id="blockShortsPages" type="checkbox">
+          </label>
+          <label class="setting-row">
+            <span>
+              <strong>Ocultar vídeos e prateleiras</strong>
+              <small>Remove cards, shelves e lockups de Shorts da página.</small>
+            </span>
+            <input id="removeShortsContent" type="checkbox">
+          </label>
+          <label class="setting-row">
+            <span>
+              <strong>Ocultar atalhos</strong>
+              <small>Remove links, chips e abas que levam para Shorts.</small>
+            </span>
+            <input id="removeShortsNavigation" type="checkbox">
+          </label>
+        </div>
+
+        <div class="setting-block wide">
+          <h2>Pesquisa</h2>
+          <label class="setting-row">
+            <span>
+              <strong>Forçar filtro Vídeos</strong>
+              <small>Aplica o filtro de vídeo e sincroniza o chip visual quando o YouTube usar fallback por URL.</small>
+            </span>
+            <input id="forceVideoSearchFilter" type="checkbox">
+          </label>
+        </div>
+      </section>
+
+      <section class="stats-band" aria-label="Estatísticas">
+        <div>
+          <span id="hiddenItems">0</span>
+          <small>itens ocultos</small>
+        </div>
+        <div>
+          <span id="blockedNavigations">0</span>
+          <small>acessos barrados</small>
+        </div>
+        <div>
+          <span id="searchFiltersApplied">0</span>
+          <small>filtros aplicados</small>
+        </div>
+        <button id="resetStats" type="button">Zerar contadores</button>
+      </section>
+    </main>
+
+    <script src="../src/config.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

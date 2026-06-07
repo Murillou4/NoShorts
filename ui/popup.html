@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NoShorts</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup-shell">
+      <header class="top">
+        <img src="../icons/icon48.png" width="32" height="32" alt="">
+        <div>
+          <h1>NoShorts</h1>
+          <p id="statusText">Carregando</p>
+        </div>
+      </header>
+
+      <section class="switch-panel" aria-label="Configurações rápidas">
+        <label class="toggle-row">
+          <span>
+            <strong>Proteção</strong>
+            <small>Ativa a limpeza do YouTube.</small>
+          </span>
+          <input id="enabled" type="checkbox">
+          <i aria-hidden="true"></i>
+        </label>
+
+        <label class="toggle-row">
+          <span>
+            <strong>Filtro Vídeos</strong>
+            <small>Aplica o filtro de vídeo na pesquisa.</small>
+          </span>
+          <input id="forceVideoSearchFilter" type="checkbox">
+          <i aria-hidden="true"></i>
+        </label>
+
+        <label class="toggle-row">
+          <span>
+            <strong>Bloquear URLs</strong>
+            <small>Redireciona páginas de Shorts.</small>
+          </span>
+          <input id="blockShortsPages" type="checkbox">
+          <i aria-hidden="true"></i>
+        </label>
+      </section>
+
+      <section class="stats" aria-label="Contadores">
+        <div>
+          <span id="hiddenItems">0</span>
+          <small>itens ocultos</small>
+        </div>
+        <div>
+          <span id="blockedNavigations">0</span>
+          <small>acessos barrados</small>
+        </div>
+      </section>
+
+      <footer class="actions">
+        <button id="openOptions" type="button">Opções</button>
+        <button id="resetStats" type="button" class="secondary">Zerar</button>
+      </footer>
+    </main>
+
+    <script src="../src/config.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

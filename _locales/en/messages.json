@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "NoShorts"
+  },
+  "extensionDescription": {
+    "message": "Removes YouTube Shorts, blocks direct access, and forces search results into the Videos filter."
+  }
+}
